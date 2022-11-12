@@ -19,15 +19,26 @@
 
   html, body {
 
-  height: 100%;
+  width: 100%;
+
+  height: 100vh;
 
   padding: 0;
 
   margin: 0;
 
   background: #000;
+  position: relative;
 
 }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    margin-top: 20px;
+  }
 
 canvas {
 
@@ -45,13 +56,13 @@ canvas {
 
 
  <BODY>
-
-    <div id="wrapper">
-      <div class="static-txt">Trần Thị Mai Trâm</div>
+   <div id="wrapper">
+     <div class="static-txt">Trần Thị Mai Trâm</div>
       <ul class="dynamic-txts">
-          <li><span>Anh yêu vợ nhiều lắm <3</span></li>
+        <li><span>Anh yêu vợ nhiều lắm <3</span></li>
       </ul>
-        <canvas id="pinkboard"></canvas>
+      <canvas id="pinkboard"></canvas>
+      <h1>I Love You</h1>
     </div>
 
   
@@ -397,9 +408,9 @@ var ParticlePool = (function() {
 
       var point = pointOnHeart(t);
 
-      point.x = settings.particles.size / 2 + point.x * settings.particles.size / 350;
+      point.x = settings.particles.size / 2.5 + point.x * settings.particles.size / 500;
 
-      point.y = settings.particles.size / 2 - point.y * settings.particles.size / 350;
+      point.y = settings.particles.size / 2.5 - point.y * settings.particles.size / 500;
 
       return point;
 
